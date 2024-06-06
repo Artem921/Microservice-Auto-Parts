@@ -5,19 +5,19 @@ namespace AutoParts.Domain.Entities
 {
     public class Product:Identity
     {
-        public bool State {  get; set; }
+        public bool State { get;}
 
-        public bool InStock { get; set; }
+        public bool InStock { get;}
 
-        public DateTime DateArrival { get; set; }
-        public string Category { get; set; } = string.Empty;
+        public DateTime DateArrival { get;}
+        public string Category { get;} = string.Empty;
 
-        public string Description { get; set; } = string.Empty;
+        public string Description { get;} = string.Empty;
 
-        public string Manufacture {  get; set; } = string.Empty;
+        public string Manufacture { get;} = string.Empty;
 
-        public string Name { get; set; }= string.Empty;
-        public string VendorName { get; set; } = string.Empty;
+        public string Name { get;}= string.Empty;
+        public string VendorName { get;} = string.Empty;
 
   
 

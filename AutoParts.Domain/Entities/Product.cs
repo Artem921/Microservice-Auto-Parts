@@ -1,5 +1,4 @@
 ﻿using AutoParts.Domain.Base;
-using AutoParts.Domain.ValueObjects;
 using CSharpFunctionalExtensions;
 
 namespace AutoParts.Domain.Entities

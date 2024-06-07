@@ -11,4 +11,14 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AutoParts.Application\AutoParts.Application.csproj" />
+    <ProjectReference Include="..\AutoParts.Domain\AutoParts.Domain.csproj" />
+    <ProjectReference Include="..\AutoParts.Infrastructure\AutoParts.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>

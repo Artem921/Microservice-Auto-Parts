@@ -1,12 +1,12 @@
-﻿using AutoParts.Domain.Entities;
-using AutoParts.Infrastructure.Configuration;
+﻿using AutoParts.Infrastructure.Configuration;
+using AutoParts.Infrastructure.Configuration.ContextEntities;
 using Microsoft.EntityFrameworkCore;
 
 namespace AutoParts.Infrastructure
 {
     public class AutoPartsDbContext:DbContext
     {
-        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductContext> Products { get; set; }
 
         public AutoPartsDbContext(DbContextOptions<AutoPartsDbContext> options) : base(options) => Database.Migrate();
 

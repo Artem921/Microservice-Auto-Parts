@@ -23,5 +23,6 @@ namespace AutoParts.Infrastructure.Configuration.ContextEntities
         public string Name { get; set; } = string.Empty;
         public string VendorName { get; set; } = string.Empty;
 
+        public string Articul { get; set; } = string.Empty;
     }
 }

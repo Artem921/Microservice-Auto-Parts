@@ -14,7 +14,7 @@ namespace AutoParts.Infrastructure.Configuration
             builder.Property(k => k.VendorName).IsRequired();
             builder.Property(k => k.Description).IsRequired();
             builder.Property(k => k.Manufacture).IsRequired();
-            
+            builder.Property(k => k.Articul).IsRequired();
         }
     }
 }

@@ -2,7 +2,7 @@
 using AutoParts.Infrastructure.Configuration.ContextEntities;
 using Mapster;
 
-namespace AutoParts.Infrastructure.Tools.Mapper
+namespace AutoParts.API.Mapper
 {
     public class RegisterMapper : IRegister
     {
@@ -10,8 +10,6 @@ namespace AutoParts.Infrastructure.Tools.Mapper
         {
             config.NewConfig<ProductContext, Product>()
                 .RequireDestinationMemberSource(true);
-
-         
         }
     }
 }

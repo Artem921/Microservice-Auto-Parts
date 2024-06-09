@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "AutoParts.Product": "Host=localhost;Port=5433;Database=AutoParts.Product;Username=postgres;Password=123"
+  }
+}

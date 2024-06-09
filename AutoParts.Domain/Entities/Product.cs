@@ -37,7 +37,7 @@ namespace AutoParts.Domain.Entities
             Articul  = articul;
         }
 
-        public static Result<Product> Create(Guid id,bool state, bool inStock, DateTime dateArrial, string categoy, string description, string manufacture, string name, string vendorName)
+        public static Result<Product> Create(Guid id,bool state, bool inStock, DateTime dateArrial, string categoy, string description, string manufacture, string name, string vendorName,string articul)
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -64,8 +64,11 @@ namespace AutoParts.Domain.Entities
             {
                 return Result.Failure<Product>($"{nameof(manufacture)} не может быть пустым");
             }
-
-            var product = new Product(id,state, inStock, dateArrial, categoy, description, manufacture, name, vendorName);
+            if (string.IsNullOrEmpty(articul))
+            {
+                return Result.Failure<Product>($"{nameof(articul)} не может быть пустым");
+            }
+            var product = new Product(id,state, inStock, dateArrial, categoy, description, manufacture, name, vendorName,articul);
 
             return Result.Success(product);
         }

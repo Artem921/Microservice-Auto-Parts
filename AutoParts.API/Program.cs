@@ -1,6 +1,5 @@
-using AutoParts.Infrastructure.Tools.Mapper;
+using AutoParts.Infrastructure;
 using Mapster;
-using MapsterMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,18 +9,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton(() =>
-{
-    var config = new TypeAdapterConfig();
+builder.Services.AddDbContext<AutoPartsDbContext>();
+builder.Services.AddMapster();
 
-    new RegisterMapper().Register(config);
-
-    return config;
-});
-builder.Services.AddScoped<IMapper, ServiceMapper>();
 
 var app = builder.Build();
-
+Console.WriteLine(Environment.CurrentDirectory);
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

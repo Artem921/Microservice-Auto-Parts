@@ -10,7 +10,6 @@ namespace AutoParts.Infrastructure.Repositories
     {
         private readonly AutoPartsDbContext context;
 
-
         public ProductsRepository(AutoPartsDbContext context)
         {
             this.context = context;
@@ -25,7 +24,6 @@ namespace AutoParts.Infrastructure.Repositories
 
             await context.SaveChangesAsync();
         }
-
 
         public async Task Update(Product product)
         {
@@ -44,7 +42,6 @@ namespace AutoParts.Infrastructure.Repositories
 
             await context.SaveChangesAsync();
         }
-
 
         public async Task Delete(Guid id)
         {

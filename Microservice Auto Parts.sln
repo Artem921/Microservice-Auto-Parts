@@ -5,13 +5,15 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{47BFA302-2E31-42B2-819C-806E3BA314B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.Domain", "AutoParts.Domain\AutoParts.Domain.csproj", "{32AAE294-44DD-44FA-A0C8-647A66A4CFBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Domain", "Microservice.Products\Products.Domain\Products.Domain.csproj", "{32AAE294-44DD-44FA-A0C8-647A66A4CFBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.Application", "AutoParts.Application\AutoParts.Application.csproj", "{E867E83B-279D-4889-8666-9E065699177E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Application", "Microservice.Products\Products.Application\Products.Application.csproj", "{E867E83B-279D-4889-8666-9E065699177E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.Infrastructure", "AutoParts.Infrastructure\AutoParts.Infrastructure.csproj", "{76B7F5B0-7D48-4838-AC2E-7C12E6F4F4F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Infrastructure", "Microservice.Products\Products.Infrastructure\Products.Infrastructure.csproj", "{76B7F5B0-7D48-4838-AC2E-7C12E6F4F4F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.API", "AutoParts.API\AutoParts.API.csproj", "{10E5E43E-EF50-4FD0-B9D5-E4A2C121F713}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API", "Microservice.Products\Products.API\Products.API.csproj", "{10E5E43E-EF50-4FD0-B9D5-E4A2C121F713}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice.Products", "Microservice.Products", "{48C0FD2B-2654-4674-97F0-C610D40002A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,10 +42,11 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{32AAE294-44DD-44FA-A0C8-647A66A4CFBE} = {47BFA302-2E31-42B2-819C-806E3BA314B0}
-		{E867E83B-279D-4889-8666-9E065699177E} = {47BFA302-2E31-42B2-819C-806E3BA314B0}
-		{76B7F5B0-7D48-4838-AC2E-7C12E6F4F4F8} = {47BFA302-2E31-42B2-819C-806E3BA314B0}
-		{10E5E43E-EF50-4FD0-B9D5-E4A2C121F713} = {47BFA302-2E31-42B2-819C-806E3BA314B0}
+		{32AAE294-44DD-44FA-A0C8-647A66A4CFBE} = {48C0FD2B-2654-4674-97F0-C610D40002A4}
+		{E867E83B-279D-4889-8666-9E065699177E} = {48C0FD2B-2654-4674-97F0-C610D40002A4}
+		{76B7F5B0-7D48-4838-AC2E-7C12E6F4F4F8} = {48C0FD2B-2654-4674-97F0-C610D40002A4}
+		{10E5E43E-EF50-4FD0-B9D5-E4A2C121F713} = {48C0FD2B-2654-4674-97F0-C610D40002A4}
+		{48C0FD2B-2654-4674-97F0-C610D40002A4} = {47BFA302-2E31-42B2-819C-806E3BA314B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CC5EDDF-EB34-43B1-A27A-1EE4C0A393A6}

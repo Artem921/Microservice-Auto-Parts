@@ -38,7 +38,8 @@ namespace AutoParts.Infrastructure.Repositories
                 .SetProperty(b => b.VendorName, b => product.VendorName)
                 .SetProperty(b => b.DateArrival, b => product.DateArrival)
                 .SetProperty(b => b.Articul, b => product.Articul)
-                .SetProperty(b => b.Manufacture, b => product.Manufacture));
+                .SetProperty(b => b.Manufacture, b => product.Manufacture)
+                .SetProperty(b => b.Price, b => product.Price));
 
             await context.SaveChangesAsync();
         }

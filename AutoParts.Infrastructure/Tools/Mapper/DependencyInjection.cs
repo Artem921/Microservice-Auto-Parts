@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace AutoParts.API.Mapper
+namespace AutoParts.Infrastructure.Tools.Mapper
 {
     public static class DependencyInjection
     {

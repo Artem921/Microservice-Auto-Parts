@@ -19,11 +19,14 @@ namespace AutoParts.Domain.Entities
         public string Name { get;}= string.Empty;
         public string VendorName { get;} = string.Empty;
 
+        public decimal Price { get; } = decimal.Zero;
+
         public string Articul {  get;} = string.Empty;
+
 
   
 
-        private Product (Guid id,bool state,bool inStock, DateTime dateArrial, string categoy, string description, string manufacture, string name, string vendorName,string articul)
+        private Product (Guid id,bool state,bool inStock, DateTime dateArrial, string categoy, string description, string manufacture, string name, string vendorName,decimal price,string articul)
         {
             Id = id;
             State = state;
@@ -34,10 +37,11 @@ namespace AutoParts.Domain.Entities
             Manufacture = manufacture;
             Name = name;
             VendorName = vendorName;
+            Price = price;
             Articul  = articul;
         }
 
-        public static Result<Product> Create(Guid id,bool state, bool inStock, DateTime dateArrial, string categoy, string description, string manufacture, string name, string vendorName,string articul)
+        public static Result<Product> Create(Guid id,bool state, bool inStock, DateTime dateArrial, string categoy, string description, string manufacture, string name, string vendorName,decimal price,string articul)
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -68,7 +72,7 @@ namespace AutoParts.Domain.Entities
             {
                 return Result.Failure<Product>($"{nameof(articul)} не может быть пустым");
             }
-            var product = new Product(id,state, inStock, dateArrial, categoy, description, manufacture, name, vendorName,articul);
+            var product = new Product(id,state, inStock, dateArrial, categoy, description, manufacture, name, vendorName,price,articul);
 
             return Result.Success(product);
         }

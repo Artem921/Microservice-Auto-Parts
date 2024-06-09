@@ -2,7 +2,7 @@
 using AutoParts.Infrastructure.Configuration.ContextEntities;
 using Mapster;
 
-namespace AutoParts.API.Mapper
+namespace AutoParts.Infrastructure.Tools.Mapper
 {
     public class RegisterMapper : IRegister
     {

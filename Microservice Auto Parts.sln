@@ -5,21 +5,30 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{47BFA302-2E31-42B2-819C-806E3BA314B0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Domain", "Services/Microservice.Products\Products.Domain\Products.Domain.csproj", "{32AAE294-44DD-44FA-A0C8-647A66A4CFBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Domain", "Services\Microservice.Products\Products.Domain\Products.Domain.csproj", "{32AAE294-44DD-44FA-A0C8-647A66A4CFBE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Application", "Services/Microservice.Products\Products.Application\Products.Application.csproj", "{E867E83B-279D-4889-8666-9E065699177E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Application", "Services\Microservice.Products\Products.Application\Products.Application.csproj", "{E867E83B-279D-4889-8666-9E065699177E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Infrastructure", "Services/Microservice.Products\Products.Infrastructure\Products.Infrastructure.csproj", "{76B7F5B0-7D48-4838-AC2E-7C12E6F4F4F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Infrastructure", "Services\Microservice.Products\Products.Infrastructure\Products.Infrastructure.csproj", "{76B7F5B0-7D48-4838-AC2E-7C12E6F4F4F8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API", "Services/Microservice.Products\Products.API\Products.API.csproj", "{10E5E43E-EF50-4FD0-B9D5-E4A2C121F713}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API", "Services\Microservice.Products\Products.API\Products.API.csproj", "{10E5E43E-EF50-4FD0-B9D5-E4A2C121F713}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CDD4DB00-6BED-4653-820D-391D98A4FEBD} = {CDD4DB00-6BED-4653-820D-391D98A4FEBD}
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice.Products", "scr/Microservice.Products", "{48C0FD2B-2654-4674-97F0-C610D40002A4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice.Products", "Microservice.Products", "{48C0FD2B-2654-4674-97F0-C610D40002A4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice.Cart", "src/Microservice.Cart", "{8E3D7514-F065-49C2-BB3F-6DC571354C2F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice.Cart", "Microservice.Cart", "{8E3D7514-F065-49C2-BB3F-6DC571354C2F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cart.Domain", "Services/Microservice.Cart\Cart.Domain\Cart.Domain.csproj", "{2AD25E1F-4EFD-4B91-A825-9DF2A13A102F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cart.Domain", "Services\Microservice.Cart\Cart.Domain\Cart.Domain.csproj", "{2AD25E1F-4EFD-4B91-A825-9DF2A13A102F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6B3F4AA0-4FF3-4918-9184-63BD6C413D2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5AB69370-C68B-41C9-8AB6-2E9A4652312C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MassTransit", "MassTransit", "{713041D6-F60F-44D3-958A-80CB599B1FEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassTransit.Contract", "Infrastructure\MassTransit.Contract\MassTransit.Contract.csproj", "{CDD4DB00-6BED-4653-820D-391D98A4FEBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +56,10 @@ Global
 		{2AD25E1F-4EFD-4B91-A825-9DF2A13A102F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AD25E1F-4EFD-4B91-A825-9DF2A13A102F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AD25E1F-4EFD-4B91-A825-9DF2A13A102F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD4DB00-6BED-4653-820D-391D98A4FEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD4DB00-6BED-4653-820D-391D98A4FEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD4DB00-6BED-4653-820D-391D98A4FEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD4DB00-6BED-4653-820D-391D98A4FEBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +73,9 @@ Global
 		{8E3D7514-F065-49C2-BB3F-6DC571354C2F} = {6B3F4AA0-4FF3-4918-9184-63BD6C413D2E}
 		{2AD25E1F-4EFD-4B91-A825-9DF2A13A102F} = {8E3D7514-F065-49C2-BB3F-6DC571354C2F}
 		{6B3F4AA0-4FF3-4918-9184-63BD6C413D2E} = {47BFA302-2E31-42B2-819C-806E3BA314B0}
+		{5AB69370-C68B-41C9-8AB6-2E9A4652312C} = {47BFA302-2E31-42B2-819C-806E3BA314B0}
+		{713041D6-F60F-44D3-958A-80CB599B1FEF} = {5AB69370-C68B-41C9-8AB6-2E9A4652312C}
+		{CDD4DB00-6BED-4653-820D-391D98A4FEBD} = {713041D6-F60F-44D3-958A-80CB599B1FEF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CC5EDDF-EB34-43B1-A27A-1EE4C0A393A6}

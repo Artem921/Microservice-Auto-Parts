@@ -4,27 +4,27 @@ namespace Products.Domain.Entities
 {
     public class Product
     {
-        public Guid Id { get; }
-        public bool State { get; }
+        public Guid Id { get; set; }
+        public bool State { get; set; }
 
-        public bool InStock { get; }
+        public bool InStock { get; set; }
 
-        public DateTime DateArrival { get; }
-        public string Category { get; } = string.Empty;
+        public DateTime DateArrival { get; set; }
+        public string Category { get; set; } = string.Empty;
 
-        public string Description { get; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
 
-        public string Manufacture { get; } = string.Empty;
+        public string Manufacture { get; set; } = string.Empty;
 
-        public string Name { get; } = string.Empty;
-        public string VendorName { get; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string VendorName { get; set; } = string.Empty;
 
-        public decimal Price { get; } = decimal.Zero;
+        public decimal Price { get; set; } = decimal.Zero;
 
-        public string Articul { get; } = string.Empty;
+        public string Articul { get; set; } = string.Empty;
 
 
-
+        public Product() { }
 
         private Product(Guid id, bool state, bool inStock, DateTime dateArrial, string categoy, string description, string manufacture, string name, string vendorName, decimal price, string articul)
         {

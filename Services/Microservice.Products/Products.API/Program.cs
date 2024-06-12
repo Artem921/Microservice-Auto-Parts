@@ -1,21 +1,34 @@
 using Mapster;
+using MassTransit.Contract.Configuration;
+using Products.Application;
+using Products.Application.Abstractions;
+using Products.Domain.Abstractions;
 using Products.Infrastructure;
+using Products.Infrastructure.MassTransit;
+using Products.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AutoPartsDbContext>();
 builder.Services.AddMapster();
-
+builder.Services.AddScoped<IProductService,ProductService>();
+builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
+builder.Services.ConfigureServices(builder.Configuration,new MassTransitConfiguration
+{
+    Configuration = bus =>
+    {
+        bus.AddConsumer<GetProductByIdConsumer>();
+        bus.AddConsumer<AddProductConsumer>();
+    }
+} );
 
 var app = builder.Build();
-Console.WriteLine(Environment.CurrentDirectory);
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

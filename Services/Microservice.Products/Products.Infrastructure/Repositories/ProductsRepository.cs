@@ -16,7 +16,7 @@ namespace Products.Infrastructure.Repositories
 
         }
 
-        public async Task Create(Product product)
+        public async Task CreateAsync(Product product)
         {
             var productContext = product.Adapt<ProductContext>();
 
@@ -25,7 +25,7 @@ namespace Products.Infrastructure.Repositories
             await context.SaveChangesAsync();
         }
 
-        public async Task Update(Product product)
+        public async Task UpdateAsync(Product product)
         {
             await context.Products
                 .Where(p => p.Id == product.Id)
@@ -44,7 +44,7 @@ namespace Products.Infrastructure.Repositories
             await context.SaveChangesAsync();
         }
 
-        public async Task Delete(Guid id)
+        public async Task DeleteAsync(Guid id)
         {
             await context.Products
                 .Where(p => p.Id == id)
@@ -53,14 +53,14 @@ namespace Products.Infrastructure.Repositories
             await context.SaveChangesAsync();
         }
 
-        public async Task<IReadOnlyCollection<Product>> GetAll()
+        public async Task<IReadOnlyCollection<Product>> GetAllAsync()
         {
             var products = await context.Products.ToListAsync();
 
             return products.Adapt<IReadOnlyCollection<Product>>();
         }
 
-        public async Task<Product> GetById(Guid id)
+        public async Task<Product> GetByIdAsync(Guid id)
         {
             var product = await context.Products.FirstOrDefaultAsync(p => p.Id == id);
 

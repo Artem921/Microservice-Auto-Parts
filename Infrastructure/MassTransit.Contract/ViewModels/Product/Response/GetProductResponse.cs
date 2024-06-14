@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MassTransit.Contract.ViewModels.Product.Response
+﻿namespace MassTransit.Contract.ViewModels.Product.Response
 {
-    public class GetProductResponse
+    public record GetProductResponse
     {
-        public IEnumerable<ProductViewModel> Products { get; set; }
+        public ProductViewModel Product { get; set; }
     }
 }

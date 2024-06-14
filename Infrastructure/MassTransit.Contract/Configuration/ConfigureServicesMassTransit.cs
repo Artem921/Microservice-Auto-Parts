@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using MassTransit.Contract.ViewModels.Product.Request;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MassTransit.Contract.Configuration
@@ -12,23 +13,29 @@ namespace MassTransit.Contract.Configuration
             var host = rabbitSection.GetValue<string>("Host");
             var name = rabbitSection.GetValue<string>("UserName");
             var password = rabbitSection.GetValue<string>("Password");
-
+       
             services.AddMassTransit(x =>
             {
                 x.UsingRabbitMq((context, cfg) =>
                 {
+                    
                     cfg.Host($"rabbitmq://{url}/{host}", configurator =>
                     {
                         configurator.Username(name);
                         configurator.Password(password);
-                    });
-                  
+                        configurator.UseSsl(s =>
+                        {
+                            s.ServerName = host;
 
+                        });
+                    });
+                    cfg.AutoStart = true;
                     cfg.UseMessageRetry(r =>
                     {
                         r.Incremental(3, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
                     });
-
+                    
+                    cfg.UseRawJsonSerializer();
                     cfg.ConfigureEndpoints(context, SnakeCaseEndpointNameFormatter.Instance);
 
                 });

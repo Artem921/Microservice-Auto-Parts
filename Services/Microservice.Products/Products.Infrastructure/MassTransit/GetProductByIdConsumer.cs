@@ -3,28 +3,30 @@ using MapsterMapper;
 using MassTransit;
 using MassTransit.Contract.ViewModels.Product;
 using MassTransit.Contract.ViewModels.Product.Request;
+using MassTransit.Contract.ViewModels.Product.Response;
+using Products.Application.Abstractions;
 using Products.Domain.Abstractions;
 
 namespace Products.Infrastructure.MassTransit
 {
-    public class GetProductByIdConsumer : IConsumer<GetProductByIdRequest>
+    public class GetProductByIdConsumer :ProductConsumerBase, IConsumer<GetProductByIdRequest>
     {
-        private readonly IProductsRepository productsRepository;
-        private readonly IMapper mapper;
 
-        public GetProductByIdConsumer(IMapper mapper,IProductsRepository productsRepository)
+        public GetProductByIdConsumer(IProductService productsService) :base(productsService)
         {
-            this.mapper = mapper;
-            this.productsRepository = productsRepository;
+          
         }
 
         public async Task Consume(ConsumeContext<GetProductByIdRequest> context)
         {
             var productId = context.Message.Id;
-            var product = productsRepository.GetByIdAsync(productId);
-            var models = product.Adapt<ProductViewModel>();
+            var product = productsService.GetByIdAsync(productId);
+            var model = product.Adapt<ProductViewModel>();
 
-            await context.RespondAsync(models);
+            await context.RespondAsync(new GetProductResponse
+            {
+                Product=model
+            });
         }
     }
 }

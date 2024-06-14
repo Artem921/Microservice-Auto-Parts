@@ -1,4 +1,5 @@
 using Mapster;
+using MassTransit;
 using MassTransit.Contract.Configuration;
 using Products.Application;
 using Products.Application.Abstractions;
@@ -18,14 +19,15 @@ builder.Services.AddDbContext<AutoPartsDbContext>();
 builder.Services.AddMapster();
 builder.Services.AddScoped<IProductService,ProductService>();
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
-builder.Services.ConfigureServices(builder.Configuration,new MassTransitConfiguration
+builder.Services.ConfigureServices(builder.Configuration, new MassTransitConfiguration
 {
     Configuration = bus =>
     {
         bus.AddConsumer<GetProductByIdConsumer>();
-        bus.AddConsumer<AddProductConsumer>();
-    }
-} );
+        bus.AddConsumer<CreateProductConsumer>();
+    },
+
+});
 
 var app = builder.Build();
 

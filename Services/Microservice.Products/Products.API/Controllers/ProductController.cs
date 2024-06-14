@@ -1,9 +1,7 @@
-﻿using Mapster;
-using MapsterMapper;
+﻿using MassTransit;
 using MassTransit.Contract.ViewModels.Product;
+using MassTransit.Contract.ViewModels.Product.Request;
 using Microsoft.AspNetCore.Mvc;
-using Products.Application.Abstractions;
-using Products.Domain.Entities;
 
 namespace Products.API.Controllers
 {
@@ -11,23 +9,27 @@ namespace Products.API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly IProductService service;
-        private readonly IMapper mapper;
+    
+        private readonly IPublishEndpoint publishEndpoint;
 
-        public ProductController(IProductService service, IMapper mapper)
+        public ProductController(  IPublishEndpoint publishEndpoint)
         {
-            this.service = service;
-            this.mapper = mapper;
+
+            this.publishEndpoint = publishEndpoint;
         }
 
-        [HttpPost("[action]")]
+        [Route("Create")]
+        [HttpPost]
         public async Task<IActionResult> AddProduct(ProductViewModel productVM)
         {
-            var product = productVM.Adapt<Product>();
+            await publishEndpoint.Publish<CreateProductRequest>(new 
+            { 
+                productVM
+            });
 
-            await service.CreateAsync(product);
+       
 
-            return Ok(product);
+            return Ok();
         }
     }
 }

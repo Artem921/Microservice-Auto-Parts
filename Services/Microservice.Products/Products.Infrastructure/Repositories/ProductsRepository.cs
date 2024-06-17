@@ -2,15 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Products.Domain.Abstractions;
 using Products.Domain.Entities;
-using Products.Infrastructure.Configuration.ContextEntities;
+using Products.Infrastructure.ContextEntities;
 
 namespace Products.Infrastructure.Repositories
 {
     public class ProductsRepository : IProductsRepository
     {
-        private readonly AutoPartsDbContext context;
+        private readonly ProductDbContext context;
 
-        public ProductsRepository(AutoPartsDbContext context)
+        public ProductsRepository(ProductDbContext context)
         {
             this.context = context;
 

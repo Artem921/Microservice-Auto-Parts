@@ -10,7 +10,7 @@ using Products.Infrastructure;
 
 namespace AutoParts.Infrastructure.Migrations
 {
-    [DbContext(typeof(AutoPartsDbContext))]
+    [DbContext(typeof(ProductDbContext))]
     partial class AutoPartsDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Cart.Api.Controllers
+namespace UserService.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

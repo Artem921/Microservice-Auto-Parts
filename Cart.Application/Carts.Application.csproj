@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Services\Microservice.Cart\Cart.Domain\Carts.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

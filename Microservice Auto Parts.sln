@@ -18,9 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API", "Services\Mi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice.Products", "Microservice.Products", "{48C0FD2B-2654-4674-97F0-C610D40002A4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice.Cart", "Microservice.Cart", "{8E3D7514-F065-49C2-BB3F-6DC571354C2F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice.Carts", "Microservice.Carts", "{8E3D7514-F065-49C2-BB3F-6DC571354C2F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cart.Domain", "Services\Microservice.Cart\Cart.Domain\Cart.Domain.csproj", "{2AD25E1F-4EFD-4B91-A825-9DF2A13A102F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carts.Domain", "Services\Microservice.Cart\Cart.Domain\Carts.Domain.csproj", "{2AD25E1F-4EFD-4B91-A825-9DF2A13A102F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6B3F4AA0-4FF3-4918-9184-63BD6C413D2E}"
 EndProject
@@ -30,11 +30,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MassTransit", "MassTransit"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassTransit.Contract", "Infrastructure\MassTransit.Contract\MassTransit.Contract.csproj", "{CDD4DB00-6BED-4653-820D-391D98A4FEBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cart.Application", "Cart.Application\Cart.Application.csproj", "{67F6FA7B-F12B-4204-94B3-08DE8AC92C26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carts.Application", "Cart.Application\Carts.Application.csproj", "{67F6FA7B-F12B-4204-94B3-08DE8AC92C26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cart.Infrastructure", "Cart.Infrastructure\Cart.Infrastructure.csproj", "{0C6494CE-5A0C-472D-95E2-5A64346E7536}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carts.Api", "Cart.Api\Carts.Api.csproj", "{BDACE645-3104-4E69-9497-E5C25990AB2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cart.Api", "Cart.Api\Cart.Api.csproj", "{BDACE645-3104-4E69-9497-E5C25990AB2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carts.Infrastructure", "Carts.Infrastructure\Carts.Infrastructure.csproj", "{45A93A0A-A778-4886-AC22-F68FCCD43920}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,14 +70,14 @@ Global
 		{67F6FA7B-F12B-4204-94B3-08DE8AC92C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67F6FA7B-F12B-4204-94B3-08DE8AC92C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67F6FA7B-F12B-4204-94B3-08DE8AC92C26}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0C6494CE-5A0C-472D-95E2-5A64346E7536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C6494CE-5A0C-472D-95E2-5A64346E7536}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C6494CE-5A0C-472D-95E2-5A64346E7536}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C6494CE-5A0C-472D-95E2-5A64346E7536}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BDACE645-3104-4E69-9497-E5C25990AB2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BDACE645-3104-4E69-9497-E5C25990AB2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDACE645-3104-4E69-9497-E5C25990AB2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDACE645-3104-4E69-9497-E5C25990AB2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A93A0A-A778-4886-AC22-F68FCCD43920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A93A0A-A778-4886-AC22-F68FCCD43920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A93A0A-A778-4886-AC22-F68FCCD43920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A93A0A-A778-4886-AC22-F68FCCD43920}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,8 +95,8 @@ Global
 		{713041D6-F60F-44D3-958A-80CB599B1FEF} = {5AB69370-C68B-41C9-8AB6-2E9A4652312C}
 		{CDD4DB00-6BED-4653-820D-391D98A4FEBD} = {713041D6-F60F-44D3-958A-80CB599B1FEF}
 		{67F6FA7B-F12B-4204-94B3-08DE8AC92C26} = {8E3D7514-F065-49C2-BB3F-6DC571354C2F}
-		{0C6494CE-5A0C-472D-95E2-5A64346E7536} = {8E3D7514-F065-49C2-BB3F-6DC571354C2F}
 		{BDACE645-3104-4E69-9497-E5C25990AB2C} = {8E3D7514-F065-49C2-BB3F-6DC571354C2F}
+		{45A93A0A-A778-4886-AC22-F68FCCD43920} = {8E3D7514-F065-49C2-BB3F-6DC571354C2F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CC5EDDF-EB34-43B1-A27A-1EE4C0A393A6}

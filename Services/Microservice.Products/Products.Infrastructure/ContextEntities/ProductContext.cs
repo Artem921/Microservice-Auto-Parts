@@ -1,4 +1,4 @@
-﻿namespace Products.Infrastructure.Configuration.ContextEntities
+﻿namespace Products.Infrastructure.ContextEntities
 {
     public class ProductContext
     {

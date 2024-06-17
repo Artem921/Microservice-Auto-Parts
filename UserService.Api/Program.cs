@@ -1,10 +1,3 @@
-using Carts.Api.Helper;
-using Carts.Application;
-using Carts.Application.Abstractions;
-using Carts.Domain.Abstractions;
-using Carts.Infrastructure;
-using Carts.Infrastructure.Repositories;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,7 +6,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.ConfigurationServices();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

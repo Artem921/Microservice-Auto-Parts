@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Products.Infrastructure.Configuration;
-using Products.Infrastructure.Configuration.ContextEntities;
+using Products.Infrastructure.ContextEntities;
 
 namespace Products.Infrastructure
 {
-    public class AutoPartsDbContext : DbContext
+    public class ProductDbContext : DbContext
     {
         public DbSet<ProductContext> Products { get; set; }
 
-        public AutoPartsDbContext(DbContextOptions<AutoPartsDbContext> options) : base(options) => Database.Migrate();
+        public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options) => Database.Migrate();
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Products.Infrastructure.Configuration.ContextEntities;
+using Products.Infrastructure.ContextEntities;
 
 namespace Products.Infrastructure.Configuration
 {

@@ -11,7 +11,7 @@ using Products.Infrastructure;
 
 namespace AutoParts.Infrastructure.Migrations
 {
-    [DbContext(typeof(AutoPartsDbContext))]
+    [DbContext(typeof(ProductDbContext))]
     [Migration("20240609102803_initDbContext")]
     partial class initDbContext
     {

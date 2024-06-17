@@ -15,7 +15,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<AutoPartsDbContext>();
+builder.Services.AddDbContext<ProductDbContext>();
 builder.Services.AddMapster();
 builder.Services.AddScoped<IProductService,ProductService>();
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();

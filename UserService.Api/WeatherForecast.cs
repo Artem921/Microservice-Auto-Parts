@@ -1,4 +1,4 @@
-namespace Cart.Api
+namespace UserService.Api
 {
     public class WeatherForecast
     {

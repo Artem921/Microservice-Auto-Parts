@@ -1,7 +1,7 @@
 ﻿using Mapster;
 using MassTransit.Contract.ViewModels.Product;
 using Products.Domain.Entities;
-using Products.Infrastructure.Configuration.ContextEntities;
+using Products.Infrastructure.ContextEntities;
 namespace Products.Infrastructure.Tools.Mapper
 {
     public class RegisterMapper : IRegister

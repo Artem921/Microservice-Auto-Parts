@@ -21,13 +21,9 @@ namespace MassTransit.Contract.Configuration
                     
                     cfg.Host($"rabbitmq://{url}/{host}", configurator =>
                     {
-                        configurator.Username(name);
-                        configurator.Password(password);
-                        configurator.UseSsl(s =>
-                        {
-                            s.ServerName = host;
-
-                        });
+                        configurator.Username("rabbitAdmin");
+                        configurator.Password("server");
+                      
                     });
                     cfg.AutoStart = true;
                     cfg.UseMessageRetry(r =>

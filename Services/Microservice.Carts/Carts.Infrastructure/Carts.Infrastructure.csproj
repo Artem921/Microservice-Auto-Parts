@@ -12,11 +12,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Npgsql" Version="8.0.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Services\Microservice.Cart\Cart.Domain\Carts.Domain.csproj" />
+    <ProjectReference Include="..\Carts.Application\Carts.Application.csproj" />
+    <ProjectReference Include="..\Carts.Domain\Carts.Domain.csproj" />
   </ItemGroup>
 
 </Project>

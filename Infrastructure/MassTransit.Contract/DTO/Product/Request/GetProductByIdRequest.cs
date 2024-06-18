@@ -1,4 +1,4 @@
-﻿namespace MassTransit.Contract.ViewModels.Product.Request
+﻿namespace MassTransit.Contract.DTO.Product.Request
 {
     public class GetProductByIdRequest
     {

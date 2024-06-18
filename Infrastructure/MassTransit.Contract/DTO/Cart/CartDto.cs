@@ -1,6 +1,6 @@
-﻿using MassTransit.Contract.ViewModels.Product;
+﻿using MassTransit.Contract.DTO.Product;
 
-namespace MassTransit.Contract.ViewModels.Cart
+namespace MassTransit.Contract.DTO.Cart
 {
     public class CartDto
     {

@@ -1,4 +1,6 @@
-﻿namespace MassTransit.Contract.ViewModels.Product.Request
+﻿using MassTransit.Contract.DTO.Product;
+
+namespace MassTransit.Contract.DTO.Product.Request
 {
     public record CreateProductRequest
     {

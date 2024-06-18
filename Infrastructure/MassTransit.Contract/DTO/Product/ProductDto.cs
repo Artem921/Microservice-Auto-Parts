@@ -1,4 +1,4 @@
-﻿namespace MassTransit.Contract.ViewModels.Product
+﻿namespace MassTransit.Contract.DTO.Product
 {
     public class ProductDto
     {

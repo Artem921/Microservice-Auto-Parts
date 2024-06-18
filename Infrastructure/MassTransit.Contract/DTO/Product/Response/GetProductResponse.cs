@@ -1,4 +1,6 @@
-﻿namespace MassTransit.Contract.ViewModels.Product.Response
+﻿using MassTransit.Contract.DTO.Product;
+
+namespace MassTransit.Contract.DTO.Product.Response
 {
     public record GetProductResponse
     {

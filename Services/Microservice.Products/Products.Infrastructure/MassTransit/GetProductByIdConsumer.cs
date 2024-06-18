@@ -1,8 +1,8 @@
 ﻿using Mapster;
 using MapsterMapper;
 using MassTransit;
-using MassTransit.Contract.ViewModels.Product;
-using MassTransit.Contract.ViewModels.Product.Request;
+using MassTransit.Contract.DTO.Product;
+using MassTransit.Contract.DTO.Product.Request;
 using MassTransit.Contract.ViewModels.Product.Response;
 using Products.Application.Abstractions;
 using Products.Domain.Abstractions;

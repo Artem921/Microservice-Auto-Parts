@@ -1,8 +1,7 @@
 ﻿using Carts.Domain.Entities;
 using Carts.Infrastructure.Entities;
 using Mapster;
-using MassTransit.Contract.ViewModels.Cart;
-using MassTransit.Contract.ViewModels.Product;
+using MassTransit.Contract.DTO.Cart;
 
 
 namespace Products.Infrastructure.Tools.Mapper

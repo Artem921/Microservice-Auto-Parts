@@ -1,5 +1,5 @@
 ﻿using Mapster;
-using MassTransit.Contract.ViewModels.Product;
+using MassTransit.Contract.DTO.Product;
 using Products.Domain.Entities;
 using Products.Infrastructure.ContextEntities;
 namespace Products.Infrastructure.Tools.Mapper

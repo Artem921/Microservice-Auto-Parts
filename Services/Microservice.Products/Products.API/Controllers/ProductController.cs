@@ -1,6 +1,6 @@
 ﻿using MassTransit;
-using MassTransit.Contract.ViewModels.Product;
-using MassTransit.Contract.ViewModels.Product.Request;
+using MassTransit.Contract.DTO.Product;
+using MassTransit.Contract.DTO.Product.Request;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Products.API.Controllers

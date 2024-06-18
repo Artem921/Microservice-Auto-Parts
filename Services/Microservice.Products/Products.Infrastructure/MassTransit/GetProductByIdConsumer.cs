@@ -21,7 +21,7 @@ namespace Products.Infrastructure.MassTransit
         {
             var productId = context.Message.Id;
             var product = productsService.GetByIdAsync(productId);
-            var model = product.Adapt<ProductViewModel>();
+            var model = product.Adapt<ProductDto>();
 
             await context.RespondAsync(new GetProductResponse
             {

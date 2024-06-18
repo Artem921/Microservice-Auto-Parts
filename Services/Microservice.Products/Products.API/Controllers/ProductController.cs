@@ -20,7 +20,7 @@ namespace Products.API.Controllers
 
         [Route("Create")]
         [HttpPost]
-        public async Task<IActionResult> AddProduct(ProductViewModel productVM)
+        public async Task<IActionResult> AddProduct(ProductDto productVM)
         {
             await publishEndpoint.Publish<CreateProductRequest>(new 
             { 

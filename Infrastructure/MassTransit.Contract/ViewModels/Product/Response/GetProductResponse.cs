@@ -2,6 +2,6 @@
 {
     public record GetProductResponse
     {
-        public ProductViewModel Product { get; set; }
+        public ProductDto Product { get; set; }
     }
 }

@@ -1,17 +1,20 @@
-﻿using Mapster;
+﻿using Carts.Domain.Entities;
+using Carts.Infrastructure.Entities;
+using Mapster;
+using MassTransit.Contract.ViewModels.Cart;
 using MassTransit.Contract.ViewModels.Product;
-using Products.Domain.Entities;
-using Products.Infrastructure.ContextEntities;
+
+
 namespace Products.Infrastructure.Tools.Mapper
 {
     public class RegisterMapper : IRegister
     {
         public void Register(TypeAdapterConfig config)
         {
-            config.NewConfig<ProductContext, Product>()
+            config.NewConfig<CartContext, Cart>()
                 .RequireDestinationMemberSource(true);
 
-            config.NewConfig<ProductDto, Product>()
+            config.NewConfig<CartDto, Cart>()
                 .RequireDestinationMemberSource(true);
         }
     }

@@ -6,7 +6,7 @@ namespace Carts.Infrastructure.Entities
     {
         public Guid Id { get; set; }
 
-        public IEnumerable<ProductCart> products { get; set; }
+        public List<ProductCart>? Products { get; set; }
 
         public Guid PersonId { get; set; }
     }

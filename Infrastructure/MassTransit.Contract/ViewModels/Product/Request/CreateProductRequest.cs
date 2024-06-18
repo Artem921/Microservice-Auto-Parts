@@ -2,6 +2,6 @@
 {
     public record CreateProductRequest
     {
-        public ProductViewModel Product { get; set; }
+        public ProductDto Product { get; set; }
     }
 }

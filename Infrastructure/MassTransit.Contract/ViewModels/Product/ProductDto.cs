@@ -1,6 +1,6 @@
 ﻿namespace MassTransit.Contract.ViewModels.Product
 {
-    public class ProductViewModel
+    public class ProductDto
     {
         public Guid Id { get; set; }
         public bool State { get; set; }

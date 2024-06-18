@@ -9,6 +9,7 @@ namespace Carts.Infrastructure.Configuration
         public void Configure(EntityTypeBuilder<CartContext> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.ComplexProperty(property => property.Products).IsRequired();
         }
     }
 }

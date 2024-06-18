@@ -7,7 +7,7 @@ namespace Carts.Domain.Entities
     {
         public Guid Id { get; set; }
 
-        public IEnumerable<ProductCart> products { get; set; }
+        public ICollection<ProductCart> products { get; set; }
 
         public decimal TotalPrice { get; set; }
     }

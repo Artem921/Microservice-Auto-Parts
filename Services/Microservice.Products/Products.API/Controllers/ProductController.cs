@@ -2,6 +2,8 @@
 using MassTransit.Contract.DTO.Product;
 using MassTransit.Contract.DTO.Product.Request;
 using Microsoft.AspNetCore.Mvc;
+using Products.Application.Abstractions;
+using Products.Domain.Entities;
 
 namespace Products.API.Controllers
 {
@@ -9,27 +11,25 @@ namespace Products.API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-    
-        private readonly IPublishEndpoint publishEndpoint;
 
-        public ProductController(  IPublishEndpoint publishEndpoint)
+        private readonly IProductService productService;
+
+        public ProductController(IProductService productService)
         {
-
-            this.publishEndpoint = publishEndpoint;
+            this.productService = productService;
         }
+
 
         [Route("Create")]
         [HttpPost]
-        public async Task<IActionResult> AddProduct(ProductDto productVM)
+        public async Task<IActionResult> AddProduct(Product product)
         {
-            await publishEndpoint.Publish<CreateProductRequest>(new 
-            { 
-                productVM
-            });
+            productService.CreateAsync(product);
 
-       
+            return( Ok(product));
+        }
+           
 
-            return Ok();
+           
         }
     }
-}
